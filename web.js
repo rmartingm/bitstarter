@@ -3,8 +3,7 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  var b = fs.readFileSync("index.html";
-  response.send(b.toString());
+  response.send(fs.readFileSync("index.html").toString());
 });
 
 var port = process.env.PORT || 5000;
