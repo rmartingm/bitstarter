@@ -1,0 +1,14 @@
+[balajis@jiunit:~]$head -n3 index.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+[balajis@jiunit:~]$cat checks.json 
+["h1",
+ ".navigation"]
+
+[balajis@jiunit:~]$./grader.js --checks checks.json --file index.html
+{
+    ".navigation": true,
+    "h1": true
+}
